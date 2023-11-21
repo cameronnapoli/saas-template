@@ -1,0 +1,44 @@
+@import 'variables';
+
+.root {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  overflow: hidden;
+  transition: background-color 150ms ease-in-out;
+}
+
+.size-large {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 9999px;
+  
+  @media (max-width: 768px) {
+    padding: 0.35rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+.size-small {
+  padding: 0.25rem 1rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+.color-primary {
+  background-color: $primary;
+  color: white;
+
+  &:hover {
+    background-color: primary-shade(85%);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

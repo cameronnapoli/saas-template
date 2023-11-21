@@ -1,0 +1,82 @@
+@import "variables";
+
+@keyframes backdrop-anim-light {
+  from {
+    background-color: dark-opacity(0);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background-color: dark-opacity(0.1);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@keyframes backdrop-anim-dark {
+  from {
+    background-color: dark-shade(0);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background-color: dark-shade(0.2);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@mixin animation {
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdropLight {
+  @include animation;
+  animation-name: backdrop-anim-light;
+}
+
+.backdropDark {
+  @include animation;
+  animation-name: backdrop-anim-dark;
+}
+
+@keyframes modal-anim {
+  from {
+    opacity: 0.2;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.modal {
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.15),
+              0px 3px 7px rgba(0,0,0,0.15);
+  border-radius: 16px;
+  animation-name: modal-anim;
+  overflow: hidden;
+  @include animation;
+}
+
+.modalLight {
+  background-color: white;
+  color: $dark;
+  padding: 40px;
+}
+
+.modalDark {
+  background-color: $dark;
+  color: white;
+  border: 2px solid $primary;
+}
