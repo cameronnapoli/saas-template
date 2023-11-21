@@ -40,3 +40,11 @@ export const satisfyCondition = async (
 };
 
 export const defined = <T>(value: T | undefined | null): value is T => value != null;
+
+export const getChunks = <T>(arr: T[], size: number): T[][] => {
+  const chunks: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunks.push(arr.slice(i, i + size));
+  }
+  return chunks;
+};

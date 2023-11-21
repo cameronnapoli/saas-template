@@ -3,15 +3,13 @@ import React from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import Button from '@/components/atoms/Button';
-import Input from '@/components/atoms/Input';
 import Modal from '@/components/organisms/Modal';
-import FAQSection from '@/components/sections/FAQSection';
 
 const Home: React.FunctionComponent = () => {
   return (
     <main>
       Homepage<br />
-      <Button
+      {/* <Button
         onClick={() => {
           Modal.open({
             body: (
@@ -24,11 +22,10 @@ const Home: React.FunctionComponent = () => {
         }}
       >
         Open Modal
-      </Button>
-      <Input />
+      </Button> */}
+
       <Modal.Component />
       <Toaster />
-      <FAQSection />
     </main>
   );
 };
