@@ -1,7 +1,9 @@
 'use client';
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import Button from '@/components/atoms/Button';
+import Input from '@/components/atoms/Input';
 import Modal from '@/components/organisms/Modal';
 
 const Home: React.FunctionComponent = () => {
@@ -18,10 +20,13 @@ const Home: React.FunctionComponent = () => {
               </div>
             ),
           });
-        }}>
+        }}
+      >
         Open Modal
       </Button>
+      <Input />
       <Modal.Component />
+      <Toaster />
     </main>
   );
 };
