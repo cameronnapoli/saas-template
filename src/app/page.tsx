@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import Button from '@/components/atoms/Button';
 import Input from '@/components/atoms/Input';
 import Modal from '@/components/organisms/Modal';
+import FAQSection from '@/components/sections/FAQSection';
 
 const Home: React.FunctionComponent = () => {
   return (
@@ -27,6 +28,7 @@ const Home: React.FunctionComponent = () => {
       <Input />
       <Modal.Component />
       <Toaster />
+      <FAQSection />
     </main>
   );
 };

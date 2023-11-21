@@ -1,0 +1,43 @@
+@import 'variables';
+
+.title {
+  color: $primary;
+  @include h2;
+  margin-bottom: 32px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.titleContainer {
+  color: $primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  border-bottom: 3px solid $primary;
+  padding: 16px 0;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    padding: 24px 0;
+  }
+}
+
+.question {
+  color: $primary;
+  @include h3;
+}
+
+.answer {
+  color: $primary;
+  @include body;
+  margin-top: 24px;
+}
+
+.icon {
+  transition: all 150ms ease-in-out;
+}
