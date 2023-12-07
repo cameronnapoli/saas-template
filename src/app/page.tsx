@@ -9,7 +9,7 @@ const Home: React.FunctionComponent = () => {
   return (
     <main>
       Homepage<br />
-      {/* <Button
+      <Button
         onClick={() => {
           Modal.open({
             body: (
@@ -22,7 +22,7 @@ const Home: React.FunctionComponent = () => {
         }}
       >
         Open Modal
-      </Button> */}
+      </Button>
 
       <Modal.Component />
       <Toaster />
